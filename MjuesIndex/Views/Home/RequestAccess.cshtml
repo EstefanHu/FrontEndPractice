@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Get Access";
+}
+@model User
+<link rel="stylesheet" href="~/css/ra.css">
+<div class="requestContainer">
+    <p class="center thanks">@ViewData["Thanks"]</p>
+    <div class="requestForm">
+        <h1 class="center">Mjues</h1>
+        <h4>REQUEST BETA ACCESS</h4>
+        <form asp-action="GetAccess" asp-controller="Home" method="POST">
+            <span asp-validation-for="firstName"></span>
+            <input class="formInput" asp-for="firstName" placeholder="First Name" autocomplete="off">
+
+            <span asp-validation-for="lastName"></span>
+            <input class="formInput" asp-for="lastName" placeholder="Last Name" autocomplete="off">
+
+            <span asp-validation-for="emailAddress"></span>
+            <input class="formInput" asp-for="emailAddress" placeholder="Email Address" autocomplete="off">
+
+            <span asp-validation-for="chosenCity"></span>
+            <input class="formInput" asp-for="chosenCity" placeholder="What city are you registering for?" autocomplete="off">
+
+            <span asp-validation-for="message"></span>
+            <textarea class="message" asp-for="message" placeholder="Message" rows="6" cols="10"></textarea>
+
+            <input class="accessButton" type="submit" value="SUBMIT">
+        </form>
+    </span>
+    </div>
+    <div class="bottomColor"></div>
+</div>
