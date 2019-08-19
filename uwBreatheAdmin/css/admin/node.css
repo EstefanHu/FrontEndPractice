@@ -39,6 +39,7 @@
     background-color: rgb(0,0,0,0.4);
 }
 .modal-content {
+    z-index: 2;
     background-color: #fefefe;
     margin: 20% auto;
     padding: 20px;
