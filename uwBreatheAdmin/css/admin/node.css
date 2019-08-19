@@ -1,6 +1,6 @@
 .locationGrid {
     display: grid;
-    grid-template-columns: auto 200px minmax(400px, 550px) auto;
+    grid-template-columns: auto 200px minmax(450px, 550px) auto;
     grid-template-areas:
     ". locationsTable locationDetails .";
 }
@@ -8,7 +8,40 @@
     grid-area: locationsTable;
     width: 100%;
     z-index: 1;
-    padding: 30px 10px 30px 20px;
+    margin: 0;
+}
+.locationTable table {
+    margin: 30px 20px 10px 20px;
+}
+.createLocation {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 5px auto;
+    font-weight: bold;
+    font-size: .9em;
+    outline: none;
+}
+.createNewLocation:focus {
+    background-color: var(--site-background);
+}
+.creationForm > p {
+    width: 200px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.creationForm > p > input {
+    width: 100%;
+    height: 25px;
+    font-size: 1em;
+    padding: 0 5px;
+}
+.creationForm > input {
+    margin-top: 10px;
+    width: 107%;
+    font-size: 1em;
 }
 .locationDetails {
     grid-area: locationDetails;
@@ -21,7 +54,6 @@
     "editLocation"
     "managePractices"
     "addLocation";
-    /* background-color: green; */
 }
 .locationStyle {
     border-radius: 5px;
@@ -79,7 +111,7 @@
 .editLocationButton {
     background-color: var(--site-primary);
     color: white;
-    font-size: 1em;
+    font-size: .9em;
     padding: 8px 15px;
     border: none;
     border-radius: 5px;
@@ -96,13 +128,26 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "practiceTable addedPracticeTable";
+    "practiceTable addedPracticeTable"
+    "toPractices toPractices";
 }
 .practiceTable {
     grid-area: practiceTable;
 }
 .addedPracticeTable {
     grid-area: addedPracticeTable;
+}
+.toPractices {
+    grid-area: toPractices;
+}
+.toPracticesButton {
+    margin: 15px 0 5px 0;
+    font-size: 1em;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--site-primary);
+    color: white;
 }
 .addLocation {
     grid-area: addLocation;

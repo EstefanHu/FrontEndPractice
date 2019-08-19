@@ -62,6 +62,45 @@
                         </tr>
                     </tbody>
                 </table>
+                <button class="createLocation">Create Location</button>
+                <div id="createLocationModal" class="model">
+                    <span class="close">&times;</span>
+                    <h1 class="centerText">Create New Location</h1>
+                    <p>
+                        <form:errors path="node.*" />
+                    </p>
+                    <form:form method="POST" action="createNewNode" modelAttribute="node" class="creationForm">
+                        <p>
+                            <form:label path="title">Title:</form:label>
+                            <form:input path="title" />
+                        </p>
+                        <p>
+                            <form:label path="theme">Theme:</form:label>
+                            <form:input path="theme" />
+                        </p>
+                        <p>
+                            <form:label path="description">Description:</form:label>
+                            <form:input path="description" />
+                        </p>
+                        <p>
+                            <form:label path="navigationUrl">Navigation Url</form:label>
+                            <form:input path="navigationUrl" />
+                        </p>
+                        <p>
+                            <form:label path="photo">Photo:</form:label>
+                            <form:input path="photo" />
+                        </p>
+                        <p>
+                            <form:label path="latitude">Latitude:</form:label>
+                            <form:input path="latitude" />
+                        </p>
+                        <p>
+                            <form:label path="longitude">Longitude:</form:label>
+                            <form:input path="longitude" />
+                        </p>
+                        <input type="submit" value="Submit" />
+                    </form:form>
+                </div>
             </div>
             <div class="locationDetails">
                 <div class="locationStatistics locationStyle">
@@ -93,7 +132,8 @@
                 </div>
                 <div class="managePractices locationStyle">
                     <div class="practiceTable">
-                        <table class="content-table">
+                        <h2 class="centerText">All Practices</h2>
+                        <table class="content-table center">
                             <thead>
                                 <tr>
                                     <th>Practices</th>
@@ -137,7 +177,8 @@
                         </table>
                     </div>
                     <div class="addedPracticeTable">
-                        <table class="content-table">
+                        <h2 class="centerText">Practices Added</h2>
+                        <table class="content-table center">
                             <thead>
                                 <tr>
                                     <th>Practices</th>
@@ -164,9 +205,13 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="toPractices centerText">
+                        <form action="" method="GET">
+                            <input type="submit" value="Edit Practices" class="toPracticesButton">
+                        </form>
+                    </div>
                 </div>
                 <div class="addLocation locationStyle">
-
                 </div>
             </div>
         <img src="/imgs/site/splash.png" class="splash" />
