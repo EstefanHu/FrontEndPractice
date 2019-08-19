@@ -1,43 +1,87 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/css/admin.css" />
+    <link rel="stylesheet" type="text/css" href="/css/admin/admin.css" />
+    <link rel="stylesheet" type="text/css" href="/css/admin/practice.css" />
+    <link rel="stylesheet" type="text/css" href="/css/admin/table.css" />
+    <link rel="stylesheet" type="text/css" href="/css/admin/modal.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <title>Create Resource</title>
+    <title>Location Manager</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="adminGrid">
-            <div class="adminNav">
-                <a href="/" class="navHome">Home</a>
-                <a href="/admin" class="navControl">Admin</a>
+        <div class="adminNav">
+            <a href="/">
+                <p class="navItem centerText firstNavItem">Map</p>
+            </a>
+            <div class="primaryNav">
+                <a href="">
+                    <p class="navItem centerText">Location</p>
+                </a>
+                <a href="">
+                    <p class="navItem centerText">Practice</p>
+                </a>
+                <a href="">
+                    <p class="navItem centerText">User</p>
+                </a>
             </div>
-
-            <h1 class="adminTitle centerText">Create a New Practice</h1>
-            <div class="firstBlock center">
-                <p>
-                    <form:errors path="practice.*" />
-                </p>
-                <form:form method="POST" action="createNewPractice" modelAttribute="practice" class="creationForm">
-                    <p>
-                        <form:label path="title">Title:</form:label>
-                        <form:input path="title" />
-                    </p>
-                    <p>
-                        <form:label path="description">Description:</form:label>
-                        <form:input path="description" />
-                    </p>
-                    <input type="submit" value="Submit" />
-                </form:form>
-            </div>
-            <a href="/admin" class="secondBlock centerText">Back to Control</a>
+            <a href="">
+                <p class="navItem centerText lastNavItem">Logout</p>
+            </a>
         </div>
+        <div class="practiceGrid">
+            <div class="practicesTable">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Practices</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Breathe</td>
+                            <td><a href="">Add</a></td>
+                        </tr>
+                        <tr>
+                            <td>Think</td>
+                            <td><a href="">Add</a></td>
+                        </tr>
+                        <tr>
+                            <td>Go for a Jog</td>
+                            <td><a href="">Add</a></td>
+                        </tr>
+                        <tr>
+                            <td>Try to Draw</td>
+                            <td><a href="">Add</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dance</td>
+                            <td><a href="">Add</a></td>
+                        </tr>
+                        <tr>
+                            <td>Sing a Song</td>
+                            <td><a href="">Add</a></td>
+                        </tr>
+                        <tr>
+                            <td>Scream</td>
+                            <td><a href="">Add</a></td>
+                        </tr>
+                        <tr>
+                            <td>Fight Someone</td>
+                            <td><a href="">Add</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="createNew" id="createPracticeButton">Create Practice</button>
+            </div>
+            <div class="practiceDetails">
+
+            </div>
+        </div>
+        <img src="/imgs/site/splash.png" class="splash" />
     </div>
 </body>
 
