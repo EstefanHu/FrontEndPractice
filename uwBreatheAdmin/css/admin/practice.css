@@ -9,7 +9,7 @@
     width: 100%;
     z-index: 1;
 }
-.practiceTable table {
+.practicesTable table {
     margin: 30px 20px 10px 20px;
 }
 .createNew {
@@ -29,5 +29,40 @@
 
 .practiceDetails {
     grid-area: practiceDetails;
+    z-index: 1;
+    padding: 30px 20px 30px 10px;
+    display: grid;
+    grid-template-rows: auto auto auto auto 160px;
+    grid-template-areas:
+    "practiceStatistics"
+    "practice"
+    "managePractice"
+    "photoManger"
+    ".";
 }
+.manageFeedStyle {
+    border-radius: 5px;
+    background-color: var(--site-background);
+    margin-bottom: 7px;
+    padding: 10px 15px;
+}
+.practiceStatistics {
+    grid-area: practiceStatistics;
+}
+.practice {
+    grid-area: practice;
+    position: relative;
+    font-size: 1.1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 35px auto auto auto auto;
+    grid-gap: 5px;
+    grid-template-areas:
+    "practiceTitle practiceTheme"
+    "practiceImage practiceImage"
+    "practiceDescription practiceDescription"
+    "practiceUrl practiceUrl"
+    "latlon editButton";
+}
+
 

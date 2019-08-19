@@ -34,12 +34,12 @@
     grid-template-rows: auto auto auto auto 160px;
     grid-template-areas:
     "locationStatistics"
-    "editLocation"
+    "location"
     "managePractices"
     "photoManager"
     ".";
 }
-.locationStyle {
+.manageFeedStyle {
     border-radius: 5px;
     background-color: var(--site-background);
     margin-bottom: 7px;
@@ -49,7 +49,7 @@
     grid-area: locationStatistics;
 }
 .location {
-    grid-area: editLocation;
+    grid-area: location;
     position: relative;
     font-size: 1.1em;
     display: grid;
