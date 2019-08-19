@@ -1,64 +1,175 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/css/admin/admin.css" />
     <link rel="stylesheet" type="text/css" href="/css/admin/node.css" />
+    <link rel="stylesheet" type="text/css" href="/css/admin/table.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <title>Create Node</title>
+    <title>Location Manager</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="adminGrid">
-            <div class="adminNav">
-                <a href="/" class="navHome">Home</a>
-                <a href="/admin" class="navControl">Admin</a>
+        <div class="adminNav">
+            <a href="/">
+                <p class="navItem centerText firstNavItem">Map</p>
+            </a>
+            <div class="primaryNav">
+                <a href="">
+                    <p class="navItem centerText">Location</p>
+                </a>
+                <a href="">
+                    <p class="navItem centerText">Practice</p>
+                </a>
+                <a href="">
+                    <p class="navItem centerText">User</p>
+                </a>
             </div>
-
-            <h1 class="adminTitle centerText">Create a New Node</h1>
-            <div class="firstBlock center">
-                <p>
-                    <form:errors path="node.*" />
-                </p>
-                <form:form method="POST" action="createNewNode" modelAttribute="node" class="creationForm">
-                    <p>
-                        <form:label path="title">Title:</form:label>
-                        <form:input path="title" />
-                    </p>
-                    <p>
-                        <form:label path="theme">Theme:</form:label>
-                        <form:input path="theme" />
-                    </p>
-                    <p>
-                        <form:label path="description">Description:</form:label>
-                        <form:input path="description" />
-                    </p>
-                    <p>
-                        <form:label path="navigationUrl">Navigation Url</form:label>
-                        <form:input path="navigationUrl" />
-                    </p>
-                    <p>
-                        <form:label path="photo">Photo:</form:label>
-                        <form:input path="photo" />
-                    </p>
-                    <p>
-                        <form:label path="latitude">Latitude:</form:label>
-                        <form:input path="latitude" />
-                    </p>
-                    <p>
-                        <form:label path="longitude">Longitude:</form:label>
-                        <form:input path="longitude" />
-                    </p>
-                    <input type="submit" value="Submit" />
-                </form:form>
-            </div>
-            <a href="/admin" class="secondBlock centerText">Back to Control</a>
+            <a href="">
+                <p class="navItem centerText lastNavItem">Logout</p>
+            </a>
         </div>
+        <div class="locationGrid">
+            <div class="locationTable">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Manager</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Paccar Hall</td>
+                            <td><a href="">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>The Hub</td>
+                            <td><a href="">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Rainer Vista</td>
+                            <td><a href="">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Grieg Garden</td>
+                            <td><a href="">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>IMA</td>
+                            <td><a href="">Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="locationDetails">
+                <div class="locationStatistics locationStyle">
+                    <h1 class="centerText">Statistics about Locations</h1>
+                </div>
+                <div class="location locationStyle">
+                    <div class="locationInformation">
+                        <h1 class="locationTitle">Paccar Hall</h1>
+                        <h3 class="locationTheme">Move Your Body</h3>
+                        <img src="/imgs/paccar.png" class="locationImage">
+                        <p class="locationDescription">This location is about as good as it gets, really just a fantastic location to sit and look at the window nothing other than the window only the window the window is the world</p>
+                        <div class="locationUrl">
+                            <p>Url: <a
+                                    href="https://www.google.com/maps/place/PACCAR+Hall/@47.6591406,-122.310787,17z/data=!3m1!4b1!4m5!3m4!1s0x5490148c7ff84a3f:0x8a58dcfd31224abd!8m2!3d47.6591406!4d-122.3085982">
+                                    www.google.com/maps/place/PACCAR+Hall/@47.6591406,-122.310787,17z/data=!3m1!4b1!4m5!3m4!1s0x5490148c7ff84a3f:0x8a58dcfd31224abd!8m2!3d47.6591406!4d-122.3085982</a>
+                            </p>
+                        </div>
+                        <div class="latlon">
+                            <p>Latitude: 47.098743</p>
+                            <p>longitude: -122.243562</p>
+                        </div>
+                        <div class="editLocation">
+                            <button class="editLocationButton">Edit Location</button>
+                        </div>
+                    </div>
+                    <div classs="locationForm">
+                        
+                    </div>
+                </div>
+                <div class="managePractices locationStyle">
+                    <div class="practiceTable">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Practices</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Breathe</td>
+                                    <td><a href="">Add</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Think</td>
+                                    <td><a href="">Add</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Go for a Jog</td>
+                                    <td><a href="">Add</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Try to Draw</td>
+                                    <td><a href="">Add</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Dance</td>
+                                    <td><a href="">Add</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Sing a Song</td>
+                                    <td><a href="">Add</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Scream</td>
+                                    <td><a href="">Add</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Fight Someone</td>
+                                    <td><a href="">Add</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="addedPracticeTable">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Practices</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Breathe</td>
+                                    <td><a href="">Remove</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Go for a Jog</td>
+                                    <td><a href="">Remove</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Try to Draw</td>
+                                    <td><a href="">Remove</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Sing a Song</td>
+                                    <td><a href="">Remove</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="addLocation locationStyle">
+
+                </div>
+            </div>
+        <img src="/imgs/site/splash.png" class="splash" />
     </div>
 </body>
 

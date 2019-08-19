@@ -10,15 +10,25 @@
 </head>
 
 <body>
-    <div class="adminContainer">
+    <div class="container">
         <div class="adminNav">
-            <a href="/" class="navHome">Home</a>
-            <a href="/admin" class="navControl">Admin</a>
+            <a href="/"><p class="navItem centerText firstNavItem">Map</p></a>
+            <div class="primaryNav">
+                <a href="">
+                    <p class="navItem centerText">Location</p>
+                </a>
+                <a href="">
+                    <p class="navItem centerText">Practice</p>
+                </a>
+                <a href="">
+                    <p class="navItem centerText">User</p>
+                </a>
+            </div>
+            <a href=""><p class="navItem centerText lastNavItem">Logout</p></a>
         </div>
         <div class="controlGrid">
-            <h1 class="centerText controlTitle">Admin Control</h1>
             <div class="locationBlock">
-                <h2 class="centerText">Location Manager</h2>
+                <h1 class="centerText">Location Manager</h1>
                 <table class=" center content-table">
                     <thead>
                         <tr>
@@ -76,7 +86,7 @@
             </div>
 
             <div class="practiceBlock">
-                <h2 class="centerText">Practice Manager</h2>
+                <h1 class="centerText">Practice Manager</h1>
                 <table class="content-table center">
                     <thead>
                         <tr>
@@ -143,6 +153,7 @@
                         href="">New Practice</a></p>
             </div>
         </div>
-        <img src="imgs/site/splash.png" class="splash" />
+        <img src="/imgs/site/splash.png" class="splash" />
     </div>
 </body>
+</html>

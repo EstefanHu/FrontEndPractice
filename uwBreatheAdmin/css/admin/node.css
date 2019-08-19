@@ -1,17 +1,109 @@
-.creationForm > p {
-    width: 200px;
-    font-size: 1em;
-    font-weight: bold;
-    padding: 5px 0;
+.locationGrid {
+    display: grid;
+    grid-template-columns: auto 200px minmax(400px, 550px) auto;
+    grid-template-areas:
+    ". locationsTable locationDetails .";
 }
-.creationForm > p > input {
+.locationTable {
+    grid-area: locationsTable;
     width: 100%;
-    height: 25px;
-    font-size: 1em;
-    padding: 0 5px;
+    z-index: 1;
+    padding: 30px 10px 30px 20px;
 }
-.creationForm > input {
-    margin-top: 10px;
-    width: 107%;
+.locationDetails {
+    grid-area: locationDetails;
+    z-index: 1;
+    padding: 30px 20px 30px 10px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "locationStatistics"
+    "editLocation"
+    "managePractices"
+    "addLocation";
+    /* background-color: green; */
+}
+.locationStyle {
+    border-radius: 5px;
+    background-color: var(--site-background);
+    margin-bottom: 7px;
+    padding: 10px 15px;
+}
+.locationStatistics {
+    grid-area: locationStatistics;
+}
+.location {
+    grid-area: editLocation;
+    position: relative;
+    font-size: 1.1em;
+}
+.locationInformation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 35px auto auto auto auto;
+    grid-gap: 5px;
+    grid-template-areas:
+    "locationTitle locationTheme"
+    "locationImage locationImage"
+    "locationDescription locationDescription"
+    "locationUrl locationUrl"
+    "latlon editButton";
+}
+.locationTitle {
+    grid-area: locationTitle;
+}
+.locationTheme {
+    grid-area: locationTheme;
+    text-align: right;
+    margin: 12px 5px 0 0;
+}
+.locationImage {
+    grid-area: locationImage;
+    width: 100%;
+}
+.locationDescription {
+    grid-area: locationDescription;
+}
+.locationUrl {
+    grid-area: locationUrl;
+    white-space: nowrap;
+    overflow: hidden;
+    /* TODO: text-overflow: ellipsis */
+}
+.latlon {
+    grid-area: latlon;
+}
+.editLocation {
+    grid-area: editButton;
+}
+.editLocationButton {
+    background-color: var(--site-primary);
+    color: white;
     font-size: 1em;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+.editLocationButton:focus {
+    background-color: var(--site-primary-bold);
+    outline: none;
+}
+.managePractices {
+    grid-area: managePractices;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "practiceTable addedPracticeTable";
+}
+.practiceTable {
+    grid-area: practiceTable;
+}
+.addedPracticeTable {
+    grid-area: addedPracticeTable;
+}
+.addLocation {
+    grid-area: addLocation;
 }
