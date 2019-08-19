@@ -63,7 +63,6 @@
                     </tbody>
                 </table>
                 <button class="createLocation" id="createLocationButton">Create Location</button>
-
             </div>
             <div class="locationDetails">
                 <div class="locationStatistics locationStyle">
@@ -183,40 +182,37 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h1 class="centerText">Create New Location</h1>
-            <p>
-                <form:errors path="node.*" />
-            </p>
-            <form:form method="POST" action="createNewNode" modelAttribute="node" class="creationForm">
+            <form method="POST" action="createNewNode" class="creationForm">
                 <p>
-                    <form:label path="title">Title:</form:label>
-                    <form:input path="title" />
+                    <label path="title">Title:</label>
+                    <input path="title" />
                 </p>
                 <p>
-                    <form:label path="theme">Theme:</form:label>
-                    <form:input path="theme" />
+                    <label path="theme">Theme:</label>
+                    <input path="theme" />
                 </p>
                 <p>
-                    <form:label path="description">Description:</form:label>
-                    <form:input path="description" />
+                    <label path="description">Description:</label>
+                    <input path="description" />
                 </p>
                 <p>
-                    <form:label path="navigationUrl">Navigation Url</form:label>
-                    <form:input path="navigationUrl" />
+                    <label path="navigationUrl">Navigation Url</label>
+                    <input path="navigationUrl" />
                 </p>
                 <p>
-                    <form:label path="photo">Photo:</form:label>
-                    <form:input path="photo" />
+                    <label path="photo">Photo:</label>
+                    <input path="photo" />
                 </p>
                 <p>
-                    <form:label path="latitude">Latitude:</form:label>
-                    <form:input path="latitude" />
+                    <label path="latitude">Latitude:</label>
+                    <input path="latitude" />
                 </p>
                 <p>
-                    <form:label path="longitude">Longitude:</form:label>
-                    <form:input path="longitude" />
+                    <label path="longitude">Longitude:</label>
+                    <input path="longitude" />
                 </p>
                 <input type="submit" value="Submit" />
-            </form:form>
+            </form>
         </div>
     </div>
 </body>
