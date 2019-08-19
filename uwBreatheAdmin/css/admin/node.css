@@ -58,19 +58,19 @@
     text-decoration: none;
     cursor: pointer;
 }
-.creationForm > p {
+.form > p {
     width: 200px;
     font-size: 1em;
     font-weight: bold;
     padding: 5px 0;
 }
-.creationForm > p > input {
+.form > p > input {
     width: 100%;
     height: 25px;
     font-size: 1em;
     padding: 0 5px;
 }
-.creationForm > input {
+.form > input {
     margin-top: 10px;
     width: 100%;
     font-size: 1em;
@@ -80,12 +80,13 @@
     z-index: 1;
     padding: 30px 20px 30px 10px;
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto 160px;
     grid-template-areas:
     "locationStatistics"
     "editLocation"
     "managePractices"
-    "addLocation";
+    "photoManager"
+    ".";
 }
 .locationStyle {
     border-radius: 5px;
@@ -100,8 +101,6 @@
     grid-area: editLocation;
     position: relative;
     font-size: 1.1em;
-}
-.locationInformation {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 35px auto auto auto auto;
@@ -181,6 +180,6 @@
     background-color: var(--site-primary);
     color: white;
 }
-.addLocation {
-    grid-area: addLocation;
+.photoManager {
+    grid-area: photoManager;
 }
