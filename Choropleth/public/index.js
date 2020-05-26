@@ -3,7 +3,13 @@
   window.addEventListener('load', init);
 
   function init() {
-    startMap();
+    // startMap();
+    fetch('https://leafletjs.com/examples/choropleth/us-states.js')
+      // .then(res => res.json())
+      .then(console.log)
+      .catch(console.error);
+
+    // L.geoJson(statesData, {style: style}).addTo(map);
   }
 
   function startMap() {
@@ -28,4 +34,16 @@
            d > 10   ? '#FED976' :
                       '#FFEDA0';
   }
+
+  function style(feature) {
+    return {
+      fillColor: getColor(feature.properties.density),
+      weight: 2,
+      opacity: 1,
+      color: 'white',
+      dashArray: '3',
+      fillOpacity: 0.7
+    };
+  }
+
 })();
